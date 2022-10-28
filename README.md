@@ -73,10 +73,23 @@ The article by *First evidence of a collision between two unrelated open
 clusters in the Milky Way* [Piatti & Malhan 2022](https://ui.adsabs.harvard.edu/abs/2022MNRAS.511L...1P/abstract) could be useful.
 
 
+## Input data
+
+The data for the  clusters is taken from Gaia EDR3. We apply a filter in
+both parallax and proper motion to discard to most obvious field stars,
+based on the parameters given in Cantat-Gaudin et al.(2020) for these clusters.
+
+
 
 ## Structure
 
-xxx
+![NGC2659](./2_pipeline/1_ASteCA_out/struct/NGC2659/???.png)
+
+![NGC2659](./2_pipeline/1_ASteCA_out/struct/NGC2659/???.png)
+
+![NGC2659](./2_pipeline/1_ASteCA_out/struct/NGC2659/???.png)
+
+
 
 
 ## Membership
@@ -97,6 +110,22 @@ clust_method = GaussianMixture
 ```
 
 For UBC_482 `pyUPMASK` failed so we used the `fastMP` method.
+
+
+These are the three clusters with a membership probability cut at `P>0.5`
+
+![clusts](./2_pipeline/plots/3_clusts.png)
+
+
+## Parallax distances
+
+Selecting stars with `P>0.5` we estimate the median parallax (and 16th, 84th
+percentiles) for different cuts in `Gmag`
+
+
+![clusts](./2_pipeline/plots/plx_vs_Gmag.png)
+
+
 
 
 ## ASteCA
@@ -120,8 +149,58 @@ R5  ubc_482    min/max  6.93/7.93   0.15   0/4   0   3.1   10.81/11.81
 R5  ngc_2659   min/max  7.14/8.14   0.15   0/4   0   3.1   11.14/12.14
 ```
 
-- 1st run: cut at P>0.5
-- 2nd run: cut at P>0.7
+### 1st run
+
+For this run the membership probability cut was done at `P>0.5`
+
+**NGC2659**
+![NGC2659](./2_pipeline/1_ASteCA_out/binaries_05/NGC_2659/NGC_2659_D3.png)
+
+
+**UBC_246**
+![UBC_246](./2_pipeline/1_ASteCA_out/binaries_05/UBC_246/UBC_246_D3.png)
+
+
+**UBC_482**
+![UBC_482](./2_pipeline/1_ASteCA_out/binaries_05/UBC_482/UBC_482_D3.png)
 
 
 
+### 2nd run
+
+For this run the membership probability cut was done at `P>0.7`
+
+
+**NGC2659**
+![NGC2659](./2_pipeline/1_ASteCA_out/binaries_07/NGC_2659/NGC_2659_D3.png)
+
+
+**UBC_246**
+![UBC_246](./2_pipeline/1_ASteCA_out/binaries_07/UBC_246/UBC_246_D3.png)
+
+
+**UBC_482**
+![UBC_482](./2_pipeline/1_ASteCA_out/binaries_07/UBC_482/UBC_482_D3.png)
+
+
+
+| **NAME**        | **FeH** | **FeH\_std** | **la** | **la\_std** | **bf** | **bf\_std** | **Av** | **Av\_std** | **dm** | **dm\_std** |
+| --------------- | ------------- | ---------- | ------------- | ---------- | -------------- | ----------- | -------------- | ----------- | -------------- | ----------- |
+| P05/NGC\_2659 | \-0.18        | 0.27       | 7.99          | 0.23       | 0.45           | 0.03        | 1.62           | 0.14        | 11.33          | 0.16        |
+| P07/NGC\_2659 | \-0.13        | 0.20       | 7.51          | 0.23       | 0.46           | 0.03        | 1.60           | 0.14        | 11.35          | 0.20        |
+| CG20/NGC\_2659  | \--           | \--        | 7.64          | \--        | \--            | \--         | 1.21           | \--         | 11.61          | \--         |
+| P05/UBC\_246  | \-0.02        | 0.11       | 8.75          | 0.06       | 0.40           | 0.01        | 1.46           | 0.05        | 11.13          | 0.10        |
+| P07/UBC\_246  | 0.17          | 0.12       | 8.70          | 0.05       | 0.43           | 0.01        | 1.50           | 0.05        | 11.33          | 0.13        |
+| CG20/UBC\_246   | \--           | \--        | 8.50          | \--        | \--            | \--         | 1.59           | \--         | 11.63          | \--         |
+| P05/UBC\_482  | \-0.47        | 0.24       | 7.50          | 0.08       | 0.46           | 0.03        | 1.41           | 0.10        | 11.03          | 0.14        |
+| P07/UBC\_482  | \-0.29        | 0.34       | 7.46          | 0.12       | 0.42           | 0.03        | 1.35           | 0.13        | 10.94          | 0.24        |
+| CG20/UBC\_482   | \--           | \--        | 7.43          | \--        | \--            | \--         | 0.88           | \--         | 11.76          | \--         |
+
+
+CG20 distances from their parallax estimates
+
+| **CG20**  | **plx** | **d\_pc** | **dm** |
+| --------- | ------- | --------- | ------ |
+| NGC\_2659 | 0.452   | 2212      | 11.72  |
+| UBC\_246  | 0.485   | 2062      | 11.57  |
+| UBC\_482  | 0.446   | 2242      | 11.75  |
