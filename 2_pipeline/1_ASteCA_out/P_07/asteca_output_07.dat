@@ -1,0 +1,36 @@
+#
+# [ASteCA v0.4.3-dev]
+#
+# Created:  [2022-10-19 09:58:16]
+# Modified: [2022-10-27 18:55:58]
+#
+# NAME     : Cluster's name
+# c_x      : x center coordinate
+# c_y      : y center coordinate
+# r_cl     : radius
+# r_c      : Core radius (King profile)
+# r_t      : Tidal radius (King profile)
+# ell      : Ellipticity
+# theta    : Rotation angle
+# CI       : Contamination index
+# n_memb_k : Number of members obtained integrating the fitted King profile
+# n_memb   : Number of members assuming a uniform background
+# a_f      : Fraction of cluster's area that is present in frame
+#
+# Parameter values are in the sense: mean, median, mode, 16th percentile,
+# 84th percentile, and STDDEV.
+#
+# M  : total initial mass
+# z  : metallicity
+# a  : log(age)
+# bf : binary fraction
+# B  : beta
+# Av : Visual absorption
+# DR : differential reddening
+# Rv : ratio of total to selective absorption
+# dm : distance modulus
+#
+NAME,c_x,c_y,r_cl,r_c_mean,r_c_median,r_c_mode,r_c_16th,r_c_84th,r_c_std,r_t_mean,r_t_median,r_t_mode,r_t_16th,r_t_84th,r_t_std,ell_mean,ell_median,ell_mode,ell_16th,ell_84th,ell_std,theta_mean,theta_median,theta_mode,theta_16th,theta_84th,theta_std,CI,n_memb_k,n_memb,a_f,M_mean,M_median,M_mode,M_16th,M_84th,M_std,z_mean,z_median,z_mode,z_16th,z_84th,z_std,a_mean,a_median,a_mode,a_16th,a_84th,a_std,bf_mean,bf_median,bf_mode,bf_16th,bf_84th,bf_std,B_mean,B_median,B_mode,B_16th,B_84th,B_std,Av_mean,Av_median,Av_mode,Av_16th,Av_84th,Av_std,DR_mean,DR_median,DR_mode,DR_16th,DR_84th,DR_std,Rv_mean,Rv_median,Rv_mode,Rv_16th,Rv_84th,Rv_std,dm_mean,dm_median,dm_mode,dm_16th,dm_84th,dm_std
+binarios/NGC2659,264.182000,-1.671000,0.654005,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.0,nan,26,0.64,256.16592,247.06025,252.58762,197.82715,309.70119,68.17374,-0.42414,-0.53228,-0.62559,-0.8624,-0.03589,0.3874,8.22495,8.24591,8.29523,7.8372,8.63809,0.40325,0.34689,0.33929,0.34,0.30357,0.39286,0.03821,0.15,0.15,0.15,nan,nan,nan,1.43815,1.4614,1.51816,1.24488,1.6421,0.22598,0.0,0.0,0.0,nan,nan,nan,3.1,3.1,3.1,nan,nan,nan,11.00234,10.99377,10.99347,10.57418,11.42468,0.41717
+binarios/UBC_246,264.178000,-1.573000,0.713179,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.0,nan,322,0.59,2386.42093,2361.54135,2292.34436,2224.69071,2560.3399,192.74127,0.07684,0.06561,0.06515,0.06224,0.13389,0.06232,8.69285,8.7012,8.70157,8.67253,8.70826,0.04962,0.42763,0.42896,0.42817,0.41257,0.44262,0.01582,0.15,0.15,0.15,nan,nan,nan,1.56151,1.55673,1.5518,1.51691,1.60875,0.05958,0.0,0.0,0.0,nan,nan,nan,3.1,3.1,3.1,nan,nan,nan,11.37014,11.35397,11.33742,11.30141,11.45804,0.09036
+binarios/UBC_482,265.118000,-1.976000,0.371289,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,0.0,nan,106,0.68,617.22734,604.17222,530.9454,490.50368,755.39717,129.91345,-0.60832,-0.57119,-0.31249,-1.1272,-0.25755,0.43364,8.57153,8.64836,8.68416,8.32081,8.85444,0.32961,0.47784,0.47744,0.47832,0.45113,0.50376,0.02269,0.15,0.15,0.15,nan,nan,nan,0.87838,0.86217,0.83957,0.67791,1.10222,0.21144,0.0,0.0,0.0,nan,nan,nan,3.1,3.1,3.1,nan,nan,nan,10.36906,10.33223,10.29837,10.1084,10.58899,0.25053
