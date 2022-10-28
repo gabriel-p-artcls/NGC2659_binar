@@ -47,29 +47,36 @@ dist UBC_482-RUP_71  : 190 pc
 ```
 
 Song et al. (2022):
-"*With the cluster spatial separation of 49.45 pc, this pair has the largest
-gap among our selected pairs*"
 
-"*The cluster pair NGC 2659 and UBC 482 are another pair discovered
-by Casado (2021b)*"
+> With the cluster spatial separation of 49.45 pc, this pair has the largest gap among our selected pairs
+
+> The cluster pair NGC 2659 and UBC 482 are another pair discovered
+by Casado (2021b)
 
 
 Casado 2021:
-"*Following the criteria of previous studies, groups were further refined
-by ruling out OCs that are more than 100 pc away from any other members*"
+
+> Following the criteria of previous studies, groups were further refined
+by ruling out OCs that are more than 100 pc away from any other members
 
 This article groups NGC_2659 with several other clusters in 'Group 18'
+
+
+Dias et al. (2021):
+
+> Cantat-Gaudin et al. (2020) shows systematic trends in AV and distance,
+in the sense of our AV being larger and distance being smaller than those
+of Cantat-Gaudin et al. (2020)
 
 
 The article by *First evidence of a collision between two unrelated open
 clusters in the Milky Way* [Piatti & Malhan 2022](https://ui.adsabs.harvard.edu/abs/2022MNRAS.511L...1P/abstract) could be useful.
 
 
-Dias et al. (2021)
-*Cantat-Gaudin et al. (2020) shows systematic trends in AV and distance,
-in the sense of our AV being larger and distance being smaller than those
-of Cantat-Gaudin et al. (2020).*
 
+## Structure
+
+xxx
 
 
 ## Membership
