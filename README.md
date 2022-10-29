@@ -83,11 +83,25 @@ based on the parameters given in Cantat-Gaudin et al.(2020) for these clusters.
 
 ## Structure
 
-![NGC2659](./2_pipeline/1_ASteCA_out/struct/NGC2659/???.png)
+The centers are fixed, the radii are fitted. Frames are filtered from obvious
+field stars based on the parallax and proper motions of the clusters provided
+by CG20.
 
-![NGC2659](./2_pipeline/1_ASteCA_out/struct/NGC2659/???.png)
+```
+#   name       c_x      c_y       field_dens   clust_radius    f_regs
+S0  UBC_482    265.118  -1.976    a            max             0
+S0  UBC_246    264.178  -1.573    a            max             0
+S0  NGC2659    264.182  -1.671    a            max             0
+```
 
-![NGC2659](./2_pipeline/1_ASteCA_out/struct/NGC2659/???.png)
+**NGC2659**
+![NGC2659](./2_pipeline/1_ASteCA_out/struct/NGC2659/NGC2659_A3_rad.png)
+
+**UBC_246**
+![UBC_246](./2_pipeline/1_ASteCA_out/struct/UBC_246/UBC_246_A3_rad.png)
+
+**UBC_482**
+![UBC_482](./2_pipeline/1_ASteCA_out/struct/UBC_482/UBC_482_A3_rad.png)
 
 
 
@@ -120,11 +134,14 @@ These are the three clusters with a membership probability cut at `P>0.5`
 ## Parallax distances
 
 Selecting stars with `P>0.5` we estimate the median parallax (and 16th, 84th
-percentiles) for different cuts in `Gmag`
+percentiles) for different cuts in `Gmag`, and the distance modulus
+distribution.
 
 
 ![clusts](./2_pipeline/plots/plx_vs_Gmag.png)
 
+
+![clusts](./2_pipeline/plots/dm_hist.png)
 
 
 
@@ -140,14 +157,26 @@ S0  UBC_246    264.178  -1.573    a            max             0
 S0  NGC2659    264.182  -1.671    a            max             0
 ```
 
-Distance ranges are taken from the parallax range of the members.
+Ranges for the first two runs. Distance ranges are taken from the parallax
+range of the members, age ranges are taken from CG20.
 
 ```
 #   name       z        log(age)    Beta   Av    DR  Rv    d_m
-R5  ubc_246    min/max  8.0/9.0     0.15   0/4   0   3.1   10.99/11.99
-R5  ubc_482    min/max  6.93/7.93   0.15   0/4   0   3.1   10.81/11.81
-R5  ngc_2659   min/max  7.14/8.14   0.15   0/4   0   3.1   11.14/12.14
+R5  UBC_246   min/max   8.0/9.0     0.15    0/4    0   3.1   11.38/11.62
+R5  UBC_482   min/max   6.93/7.93   0.15    0/4    0   3.1   11.54/11.92
+R5  NGC_2659  min/max   7.14/8.14   0.15    0/4    0   3.1   11.52/11.77
 ```
+
+Priors are all uniform except the distance modulus, taken from the parallax
+distribution of `P>0.5, G>17 mag` members.
+
+```
+#      name      z    log(age)    Beta     Av      DR      Rv    d_m
+B2  UBC_482      u           u       u      u       u       u     g/11.71/.2
+B2  UBC_246      u           u       u      u       u       u     g/11.50/.16
+B2  NGC_2659     u           u       u      u       u       u     g/11.64/.16
+```
+
 
 ### 1st run
 
@@ -182,6 +211,10 @@ For this run the membership probability cut was done at `P>0.7`
 **UBC_482**
 ![UBC_482](./2_pipeline/1_ASteCA_out/binaries_07/UBC_482/UBC_482_D3.png)
 
+
+
+
+## Fundamental parameters
 
 
 | **NAME**        | **FeH** | **FeH\_std** | **la** | **la\_std** | **bf** | **bf\_std** | **Av** | **Av\_std** | **dm** | **dm\_std** |
