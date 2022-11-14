@@ -144,6 +144,10 @@ distribution.
 ![clusts](./2_pipeline/plots/dm_hist.png)
 
 
+Three dimensional position and radii
+
+![clusts](./2_pipeline/plots/XYZ.png)
+
 
 ## ASteCA
 
